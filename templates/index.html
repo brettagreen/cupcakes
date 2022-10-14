@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} Home Sweet Home {% endblock %}
+
+{% block content %}
+<ul id="ul-list">
+</ul>
+
+<hr>
+
+{% include 'base_form.html' %}
+<br /><br />
+
+<h3>Cupcake query filter:</h3>
+<form id="filter-form">
+    <select name="filter-attribute" id="cupcake-filter">
+        <option value="">--Please choose an option--</option>
+        <option value="flavor">Flavor</option>
+        <option value="size">Size</option>
+        <option value="rating">Rating</option>
+    </select>
+</form>
+<button hidden id="form-submit-button">Submit</button>
+
+
+<!-- Library JS & our JS -->
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+
+<script type="text/javascript" src="static/js/api_OO.js"></script>
+
+{% endblock %}
