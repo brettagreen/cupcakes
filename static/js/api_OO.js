@@ -43,7 +43,7 @@ class FilterFormMadness {
             resp = await axios.post('http://localhost:5000/api' + '/cupcakes/filter', {mode, value});
         }
         $('#ul-list').children().remove();
-        cupcakeMadness.loopCupcakes(resp);
+        this.cupcakeMadness.loopCupcakes(resp);
     }
 }
 
